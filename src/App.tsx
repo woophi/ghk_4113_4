@@ -16,11 +16,13 @@ import { ThxLayout } from './thx/ThxLayout';
 import { sendDataToGA } from './utils/events';
 import { getWordEnding } from './utils/words';
 
+const SBER_PRICE = 228.7;
+
 export const App = () => {
   const [loading, setLoading] = useState(false);
   const [thxShow, setThx] = useState(false);
   const [showBs, setShowBs] = useState(false);
-  const [price, setPrice] = useState(228.7);
+  const [price, setPrice] = useState(SBER_PRICE);
   const [count, setCount] = useState(10);
   const [selectedEns, setSelectedEns] = useState(false);
   const [safeOption, setSafeOption] = useState(5);
