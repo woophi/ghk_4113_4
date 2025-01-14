@@ -16,8 +16,6 @@ import { ThxLayout } from './thx/ThxLayout';
 import { sendDataToGA } from './utils/events';
 import { getWordEnding } from './utils/words';
 
-const COMMISSION = 7.56;
-
 export const App = () => {
   const [loading, setLoading] = useState(false);
   const [thxShow, setThx] = useState(false);
@@ -35,7 +33,9 @@ export const App = () => {
 
   const sum = price * count;
 
-  const total = selectedEns ? sum : sum;
+  let total = sum;
+  const commission = Number(((total / 100) * 0.03).toFixed(2));
+  total += commission;
 
   const submit = () => {
     window.gtag('event', 'Buy_insurance_4113_click_var4');
@@ -48,7 +48,7 @@ export const App = () => {
       percent_down: selectedEns ? safeOption : 'Nan',
       cost: 0,
       id: LS.getItem(LSKeys.UserId, null) ?? 0,
-      komiss: COMMISSION,
+      komiss: commission,
     }).then(() => {
       setThx(true);
       setLoading(false);
@@ -288,7 +288,7 @@ export const App = () => {
             </Typography.Text>
           </div>
           <Typography.Text style={{ marginLeft: '8px' }} view="component-secondary" color="secondary">
-            Комиссия ≈ {COMMISSION.toLocaleString('ru')} ₽
+            Комиссия ≈ {commission.toLocaleString('ru')} ₽
           </Typography.Text>
 
           <Switch
