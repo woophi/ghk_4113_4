@@ -25,7 +25,7 @@ export const ThxLayout = ({}: { selectedEns: boolean }) => {
           block
           view="primary"
           href="https://alfa.me/37s3BR"
-          onClick={() => window.gtag('event', 'Buy_no_insurance_4113_click_var2')}
+          onClick={() => window.gtag('event', 'Buy_no_insurance_4113_click_var4')}
         >
           Подать заявку
         </ButtonMobile>

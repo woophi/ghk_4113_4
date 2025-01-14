@@ -100,41 +100,39 @@ globalStyle(`${inputActionsMinus} > svg > rect:last-child`, {
 
 const swSlide = recipe({
   base: {
-    width: '59px',
+    minWidth: '58px',
     maxWidth: 'max-content',
     height: '40px',
     backgroundColor: '#2637580F',
-    padding: '10px 16px',
-    borderRadius: '12px',
-    fontSize: '14px',
-    letterSpacing: '0.25px',
-    lineHeight: '20px',
+    padding: '4px 12px',
+    borderRadius: '20px',
+    fontSize: '17px',
+    letterSpacing: '-0.41px',
+    lineHeight: '24px',
     textAlign: 'center',
     transition: 'all .25s ease',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    fontWeight: 500,
   },
   variants: {
     selected: {
       true: {
         backgroundColor: '#000',
         color: '#FFF',
+        fontWeight: 600,
       },
     },
   },
 });
 
-const selectStyle = style({});
-const inputLabelStyle = style({});
+const inputs = style({
+  display: 'flex',
+  gap: '1rem',
+  alignItems: 'center',
+  marginTop: '1rem',
+});
 
-globalStyle(`${selectStyle} > div > div > span`, {
-  paddingLeft: '8px',
-});
-globalStyle(`${inputLabelStyle}  > span`, {
-  paddingLeft: '8px',
-});
 export const appSt = {
   bottomBtn,
   container,
@@ -151,6 +149,5 @@ export const appSt = {
   inputActionsHR,
   inputActionsMinus,
   swSlide,
-  selectStyle,
-  inputLabelStyle,
+  inputs,
 };
