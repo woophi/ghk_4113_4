@@ -16,7 +16,7 @@ import { ThxLayout } from './thx/ThxLayout';
 import { sendDataToGA } from './utils/events';
 import { getWordEnding } from './utils/words';
 
-const SBER_PRICE = 228.7;
+const SBER_PRICE = 280.6;
 
 export const App = () => {
   const [loading, setLoading] = useState(false);
