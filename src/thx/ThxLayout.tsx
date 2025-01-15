@@ -24,7 +24,7 @@ export const ThxLayout = ({}: { selectedEns: boolean }) => {
         <ButtonMobile
           block
           view="primary"
-          href="https://alfa.me/37s3BR"
+          href="alfabank://redirect_to_ai?link=https%3A%2F%2Falfa.me%2F37s3BR"
           onClick={() => window.gtag('event', 'Buy_no_insurance_4113_click_var4')}
         >
           Подать заявку
